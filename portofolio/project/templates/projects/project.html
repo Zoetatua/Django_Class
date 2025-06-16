@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2>Welcome to my Projects Page</h2>
+
+    <div class="projects">
+        {% for project in all_projects %}
+            <div class="card">
+                <img src="{{ project.image.url }}" alt="image" width="100%", height="50%">
+                <h2>{{ project.title }}</h2>
+                <h2>{{ project.description }}</h2>
+                <h2>{{ project.tech_Tack }}</h2>
+                <h2>{{ project.programmer }}</h2>
+                <a href="{{ project.projectlink }}" target='_blank'>View Project</a>
+
+                <form action="{% url 'delete_project' project.id %}" method ='post'>
+                {% csrf_token %}
+                <button>Delete</button>
+            </form>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

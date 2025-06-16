@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+</head
+<body>
+    <header>
+        <div class='HOW'>How to train your <span class = 's'>Dragon</span></div>
+
+        <nav>
+            <ul>
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'Kaizo' %}">Profile</a></li>
+                <li><a href="{% url 'allProjects' %}">Project</a></li>
+                <li><a href="{% url 'add_project' %}">Add Project</a></li>
+
+                {% if user.is_authenticated %}
+                <form action="{% url 'user_logout' %}" method='post'>
+                    {% csrf_token %}
+                    <button>Log Out</button>
+                </form>
+                {% else %}
+                <li><a href="{% url 'user_login' %}">Login</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main>
+        {% block content %}
+        <h1>Dogman</h1>
+        {% endblock content %}
+    </main>
+
+    <footer>
+        <p>Legalize Nuclear Bombs</h1>
+        <p>All rights reserved &copy; 2025</p>
+    </footer>
+</body>
+</html>
