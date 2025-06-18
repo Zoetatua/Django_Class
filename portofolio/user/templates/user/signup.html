@@ -1,15 +1,17 @@
 {% extends "layout.html" %}
+{% load static %}
 
 
 
 {% block content %}
-    <h1>Sign Up Page</h1>
+    <link rel="stylesheet" href="{% static 'CSS/signup.css' %}">
 
-    <div>
+    <div class='crabs'>
+    <h1>Sign Up Page</h1>
         <form action="">
             {% csrf_token %}
             {{form}}
-            <button>Submit</button>
+            <button class='login-btn'>Submit</button>
         </form>
         
         <p>

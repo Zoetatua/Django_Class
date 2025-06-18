@@ -1,18 +1,21 @@
 {% extends "layout.html" %}
+{% load static %}
 
 
 
 {% block content %}
-    <h1>Login Page</h1>
-
-    <form action="" method="post">
-        {% csrf_token %}
-        {{form}}
-        <button>Login</button>
-    </form>
-    
-    <p>
-        Dont Have an account? <a href="{% url 'user_register' %}">Register</a>
-    </p>
+    <link rel="stylesheet" href="{% static 'CSS/login.css' %}">
+    <div class='crabs'> 
+        <h1>Login Page</h1>
+        <form action="" method="post" class='login-form'>
+            {% csrf_token %}
+            {{form}}
+            <button class='login-btn'>Login</button>
+        </form>
+        
+        <p>
+            Dont Have an account? <a href="{% url 'user_register' %}">Register</a>
+        </p>
+    </div>
 {% endblock content %}
     
