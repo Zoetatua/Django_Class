@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(25, 82, 90);
+    color: black;
+    min-height: 100vh;
+}
+
+img{
+    width: 400px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    font-weight: bold;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(46, 217, 240);
+    font-weight: bold;
+    min-height: 50px;
+    width: 100%;
+}
+
+header > nav > ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 20px;
+}
+.HOW{
+    color: green;
+    font-size: 40px;
+}
+.s{
+    color: red;
+}
+
+ul > li > a{
+    text-decoration: none;
+    color: purple;
+}
+
+a:hover{
+    color: rgb(250, 179, 0);
+}
+
+h3{
+    color: rgb(26, 1, 51);
+}
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+    margin-top: 20px;
+
+}
+
+.hero-content{
+    font-size: 18px;
+    width: 500px;
+
+    margin-top: 20px;
+}
+
+
+button{
+    background-color: rgb(245, 88, 88);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.bananan{
+    font-size: 40px;
+    color: black;
+}
+
+.nnna{
+    font-size: 20px;
+    color: rgb(65, 1, 1);
+    font-weight: bolder;
+}
+
+
+.project{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    padding: 20px;
+    gap: 30px;
+    background-color: rgb(58, 34, 4);
+    text-align: center;
+}
+
+.card{
+    background-color: rgb(255, 144, 144);
+    padding: 10px;
+    border-radius: 20px;
+}
